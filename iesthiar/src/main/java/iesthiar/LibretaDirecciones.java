@@ -3,6 +3,7 @@ package iesthiar;
 import java.io.IOException;
 
 import iesthiar.persona.Persona;
+import iesthiar.persona.VistaPersonaController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -50,6 +51,8 @@ public class LibretaDirecciones extends Application {
             loader.setLocation(LibretaDirecciones.class.getResource("persona/vistaPersona.fxml"));
             AnchorPane personOverview = (AnchorPane) loader.load();
             contenedorPrincipal.setCenter(personOverview);
+            VistaPersonaController vistaPersonaController = loader.getController();
+            vistaPersonaController.setLibretaDirecciones(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -62,9 +65,9 @@ public class LibretaDirecciones extends Application {
     public LibretaDirecciones() {
         datosPersona.add(new Persona("Andrés","Muñoz"));
         datosPersona.add(new Persona("Maria","Cubides"));
-        datosPersona.add(new Persona("Laura","Rodriguez"));
+        datosPersona.add(new Persona("Pepe","Rodriguez"));
         datosPersona.add(new Persona("Juan","Nuñez"));
-        datosPersona.add(new Persona("Leni","Diaz"));
+        datosPersona.add(new Persona("Lenny","Diaz"));
         datosPersona.add(new Persona("Homero", "Simpson"));
     }
 
