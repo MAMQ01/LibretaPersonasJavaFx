@@ -63,8 +63,8 @@
                         <Label fx:id="ciudadEtiqueta" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
                         <Label fx:id="codigoPostalEtiqueta" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
                         <Label fx:id="fechaNacimientoEtiqueta" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-                        <Button mnemonicParsing="false" text="Nuevo" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
-                        <Button mnemonicParsing="false" text="Editar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                        <Button mnemonicParsing="false" onAction="#crearPersona" text="Nuevo" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                        <Button mnemonicParsing="false" onAction="#editarPersona" text="Editar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
                         <Button mnemonicParsing="false" onAction="#borrarPersona" text="Borrar" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
                      </children>
                   </GridPane>
