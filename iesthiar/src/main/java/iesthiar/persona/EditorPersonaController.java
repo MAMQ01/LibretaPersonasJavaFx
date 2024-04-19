@@ -76,7 +76,7 @@ public class EditorPersonaController implements Initializable {
             persona.setDireccion(direccionTextField.getText());
             persona.setCodigoPostal(Integer.parseInt(codigoPostalTextField.getText()));
             persona.setCiudad(ciudadTextField.getText());
-            persona.setFechaNacimiento(LocalDate.now());
+            persona.setFechaNacimiento(null);
             guardarClicked = true; // Cambio valor booleano
             escenarioEdicion.close(); // Cierro el escenario de edición
         }

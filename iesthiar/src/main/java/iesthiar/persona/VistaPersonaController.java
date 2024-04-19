@@ -8,6 +8,7 @@ import iesthiar.util.UtilidadDeFechas;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -77,7 +78,16 @@ public class VistaPersonaController implements Initializable, ChangeListener {
     @FXML
     private void borrarPersona() {
         int indiceSeleccionado = personaTabla.getSelectionModel().getSelectedIndex();
+        if (indiceSeleccionado >= 0) {
         personaTabla.getItems().remove(indiceSeleccionado);
+        } else {
+        // Muestro alerta
+        Alert alerta = new Alert(AlertType.WARNING);
+        alerta.setTitle("Atención");
+        alerta.setHeaderText("Persona no seleccionada");
+        alerta.setContentText("Por favor, selecciona una persona de la tabla");
+        alerta.showAndWait();
+        }
     }
 
     // Muestro el diálogo editar persona cuando el usuario hace clic en el botón de
